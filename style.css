@@ -1,0 +1,1023 @@
+/* 
+body {
+  margin: 0;
+  background: #fefefe;
+  font-family: "Poppins", sans-serif;
+  color: #222;
+}
+
+.container {
+  width: 90%;
+  max-width: 1200px;
+  margin: auto;
+}
+
+
+.navbar {
+  background: #0a8837;
+  padding: 18px 0;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+}
+.nav-flex {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.logo {
+  color: white;
+  font-size: 28px;
+  font-weight: 600;
+}
+nav a {
+  color: white;
+  margin-left: 20px;
+  text-decoration: none;
+  font-weight: 500;
+}
+
+
+.hero {
+  padding: 60px 0;
+  background: linear-gradient(to right, #0a8837, #14ba4f);
+  color: white;
+}
+.hero-flex {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.hero-text h2 {
+  font-size: 42px;
+}
+.hero-text p {
+  font-size: 18px;
+}
+.btn-primary {
+  background: #ffd700;
+  padding: 12px 25px;
+  border-radius: 6px;
+  text-decoration: none;
+  color: #222;
+  font-weight: 600;
+}
+
+.hero-graphic img {
+  width: 350px;
+  border-radius: 12px;
+  
+  object-fit: cover;
+  margin-left: 100%;
+  margin-bottom: 5%;
+}
+
+
+.trusted {
+  padding: 40px 0;
+  text-align: center;
+}
+.bank-row img {
+  width: 120px;
+  margin: 0 10px;
+  opacity: 0.9;
+}
+
+
+.section {
+  padding: 60px 0;
+}
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
+  gap: 20px;
+}
+.card {
+  background: #fff;
+  border: 1px solid #eaeaea;
+  padding: 20px;
+  border-radius: 12px;
+  text-align: center;
+  transition: 0.2s;
+}
+.card:hover {
+  border-color: #0a8837;
+}
+
+
+.how {
+  background: #f7fdf8;
+  padding: 60px 0;
+}
+.steps {
+  display: flex;
+  justify-content: space-between;
+  gap: 20px;
+}
+.step {
+  background: white;
+  padding: 20px;
+  border-radius: 12px;
+  border-left: 6px solid #0a8837;
+  width: 32%;
+}
+
+
+.apply-box {
+  background: white;
+  padding: 40px;
+  border-radius: 12px;
+  width: 100%;
+  max-width: 650px;
+  margin: auto;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+}
+.loan-form input,
+.loan-form select {
+  width: 100%;
+  padding: 14px;
+  margin-bottom: 15px;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+}
+.btn-submit {
+  width: 100%;
+  padding: 15px;
+  background: #0a8837;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  font-size: 17px;
+}
+
+
+.footer {
+  background: #0a8837;
+  color: white;
+  padding: 30px 0;
+  text-align: center;
+}
+
+
+@media (max-width: 900px) {
+  .hero-flex {
+    flex-direction: column;
+    text-align: center;
+  }
+  .hero-graphic img {
+    width: 260px;
+  }
+  .steps {
+    flex-direction: column;
+  }
+}
+
+
+.calculator-section {
+  padding: 60px 0;
+  background: #ffffff;
+}
+
+.calculator-section h2 {
+  text-align: center;
+  margin-bottom: 25px;
+  color: #0a8837;
+}
+
+.calculator-box {
+  display: flex;
+  justify-content: space-between;
+  gap: 30px;
+  background: white;
+  padding: 30px;
+  border-radius: 12px;
+  box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.05);
+}
+
+.calc-inputs,
+.calc-results {
+  width: 48%;
+}
+
+.calc-inputs input {
+  width: 100%;
+  padding: 14px;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  margin-bottom: 15px;
+}
+
+.calc-results {
+  background: #f4fff6;
+  padding: 20px;
+  border-radius: 10px;
+  border-left: 5px solid #0a8837;
+}
+
+.calc-results h3 {
+  color: #0a8837;
+}
+
+.calc-results p {
+  font-size: 17px;
+  margin-bottom: 10px;
+}
+
+
+@media (max-width: 900px) {
+  .calculator-box {
+    flex-direction: column;
+  }
+  .calc-inputs,
+  .calc-results {
+    width: 100%;
+  }
+}
+
+
+.logo-carousel {
+  position: relative;
+  margin-top: 25px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.carousel-track {
+  display: flex;
+  gap: 40px;
+  overflow: hidden;
+  scroll-behavior: smooth;
+  width: 90%;
+  padding: 20px 0;
+}
+
+.bank-card {
+  min-width: 180px;
+  max-width: 180px;
+  background: #ffffff;
+  border-radius: 14px;
+  padding: 20px;
+  text-align: center;
+  box-shadow: 0px 6px 20px rgba(0, 0, 0, 0.08);
+  transition: 0.3s ease;
+}
+
+.bank-card:hover {
+  transform: translateY(-5px);
+}
+
+.bank-card img {
+  width: 150px;
+  height: 150px;
+  object-fit: contain;
+  margin-bottom: 12px;
+}
+
+.bank-card p {
+  font-size: 15px;
+  font-weight: 600;
+  color: #0a8837;
+}
+
+
+.carousel-btn {
+  background: #0a8837;
+  color: white;
+  border: none;
+  font-size: 26px;
+  padding: 10px 18px;
+  cursor: pointer;
+  border-radius: 50%;
+  position: absolute;
+  top: 45%;
+  transform: translateY(-50%);
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+.left-btn {
+  left: 0;
+}
+.right-btn {
+  right: 0;
+}
+
+.carousel-btn:hover {
+  background: #0f9f42;
+}
+
+
+@media (max-width: 600px) {
+  .bank-card {
+    min-width: 140px;
+    max-width: 140px;
+  }
+  .carousel-btn {
+    display: none;
+  }
+} */
+
+/* GLOBAL */
+body {
+  margin: 0;
+  background: #fefefe;
+  font-family: "Poppins", sans-serif;
+  color: #222;
+}
+
+.container {
+  width: 90%;
+  max-width: 1200px;
+  margin: auto;
+}
+
+/* ---------------------------------- */
+/* NAVIGATION */
+/* ---------------------------------- */
+
+.navbar {
+  background: #0a8837;
+  padding: 15px 0;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+}
+
+.nav-flex {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.logo {
+  color: white;
+  font-size: 26px;
+  font-weight: 600;
+}
+
+nav a {
+  color: white;
+  margin-left: 20px;
+  text-decoration: none;
+  font-weight: 500;
+}
+
+@media (max-width: 768px) {
+  nav {
+    display: none;
+  }
+}
+
+/* ---------------------------------- */
+/* HERO SECTION */
+/* ---------------------------------- */
+
+.hero {
+  padding: 60px 20px;
+  background: linear-gradient(to right, #0a8837, #14ba4f);
+  color: white;
+}
+
+.hero-flex {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.hero-text {
+  flex: 1;
+  min-width: 300px;
+}
+
+.hero-text h2 {
+  font-size: 34px;
+  line-height: 1.2;
+  margin-bottom: 15px;
+}
+
+.hero-text p {
+  font-size: 18px;
+}
+
+.btn-primary {
+  background: #ffd700;
+  padding: 12px 25px;
+  border-radius: 6px;
+  text-decoration: none;
+  color: #222;
+  font-weight: 600;
+  display: inline-block;
+  margin-top: 15px;
+}
+
+.hero-graphic {
+  flex: 1;
+  text-align: center;
+}
+/* 
+.hero-graphic img {
+  width: 100%;
+  max-width: 350px;
+  border-radius: 12px;
+  object-fit: cover;
+  margin-top: 20px;
+}
+ */
+/* ---------------------------------- */
+/* TRUSTED BANK CAROUSEL */
+/* ---------------------------------- */
+
+.trusted {
+  padding: 40px 0;
+  text-align: center;
+}
+
+.trusted .sub {
+  margin-bottom: 20px;
+  color: #555;
+}
+
+/* Wrapper */
+/* .logo-carousel {
+  position: relative;
+  margin-top: 15px;
+} */
+
+.logo-carousel {
+  max-width: 100%;
+  overflow: hidden;
+}
+
+.carousel-track {
+  display: flex;
+  gap: 25px;
+  overflow: hidden;
+  scroll-behavior: smooth;
+  padding: 20px 10px;
+}
+
+.bank-card {
+  min-width: 180px;
+  max-width: 180px;
+  background: #ffffff;
+  border-radius: 14px;
+  padding: 20px;
+  text-align: center;
+  box-shadow: 0px 6px 20px rgba(0, 0, 0, 0.08);
+  transition: 0.3s ease;
+}
+
+@media (max-width: 400px) {
+  .bank-card {
+    min-width: 140px;
+  }
+}
+
+.bank-card:hover {
+  transform: translateY(-5px);
+}
+
+.bank-card img {
+  width: 110px;
+  margin-bottom: 12px;
+  object-fit: contain;
+}
+
+.bank-card p {
+  font-size: 15px;
+  font-weight: 600;
+  color: #0a8837;
+}
+
+/* Slider Buttons */
+/* .carousel-btn {
+  background: #0a8837;
+  color: white;
+  border: none;
+  font-size: 26px;
+  padding: 10px 18px;
+  cursor: pointer;
+  border-radius: 50%;
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  z-index: 10;
+} */
+
+/* NEW MODERN CAROUSEL BUTTONS */
+.carousel-btn {
+  background: rgba(255, 255, 255, 0.9);
+  border: none;
+  width: 45px;
+  height: 45px;
+  border-radius: 50%;
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  cursor: pointer;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 22px;
+  color: #0a8837;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.25);
+  z-index: 10;
+  transition: 0.25s ease;
+}
+
+/* .left-btn {
+  left: 10;
+}
+.right-btn {
+  right: 10;
+} */
+
+.left-btn {
+  left: 20px;
+}
+
+/* RIGHT BUTTON */
+.right-btn {
+  right: 20px;
+}
+
+/* .carousel-btn:hover {
+  background: #0f9f42;
+} */
+.carousel-btn:hover {
+  background: #0a8837;
+  color: white;
+  transform: translateY(-50%) scale(1.1);
+}
+
+/* MOBILE */
+
+@media (max-width: 600px) {
+  /* .bank-card {
+    min-width: 140px;
+    max-width: 140px;
+  }
+  .carousel-btn {
+    display: none;
+  } */
+
+  .logo-slider {
+    overflow: hidden !important;
+    width: 100%;
+  }
+
+  .logo-track {
+    display: flex;
+    gap: 20px;
+    padding: 10px 0;
+  }
+
+  .bank-card {
+    min-width: 160px !important;
+    max-width: 160px !important;
+    height: auto;
+    padding: 15px !important;
+  }
+
+  .bank-card img {
+    width: 120px !important;
+    height: 120px !important;
+    object-fit: contain;
+  }
+}
+
+/* ---------------------------------- */
+/* LOAN CARDS */
+/* ---------------------------------- */
+
+.section {
+  padding: 60px 20px;
+}
+
+.grid {
+  display: grid;
+  gap: 20px;
+  grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
+}
+
+.card {
+  background: #fff;
+  border: 1px solid #eaeaea;
+  padding: 20px;
+  border-radius: 12px;
+  text-align: center;
+  transition: 0.2s;
+}
+
+.card:hover {
+  border-color: #0a8837;
+}
+
+/* ---------------------------------- */
+/* HOW IT WORKS */
+/* ---------------------------------- */
+
+.how {
+  padding: 60px 20px;
+  background: #f7fdf8;
+}
+
+.steps {
+  display: flex;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+
+.step {
+  background: white;
+  padding: 20px;
+  border-radius: 12px;
+  border-left: 6px solid #0a8837;
+  flex: 1;
+  min-width: 260px;
+}
+
+/* HOW IT WORKS MOBILE FIX */
+.steps {
+  flex-direction: column;
+  gap: 20px !important;
+}
+
+.step {
+  width: 100% !important;
+  border: 1px solid #0a8837 !important;
+  border-left: 6px solid #0a8837 !important;
+  border-radius: 12px;
+  padding: 20px !important;
+  background: #ffffff;
+}
+
+.step span {
+  font-size: 20px;
+  font-weight: bold;
+  margin-bottom: 10px;
+  display: inline-block;
+}
+
+/* ---------------------------------- */
+/* FORM */
+/* ---------------------------------- */
+
+.apply-box {
+  background: white;
+  padding: 40px;
+  border-radius: 12px;
+  width: 100%;
+  max-width: 650px;
+  margin: auto;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+}
+
+.loan-form input,
+.loan-form select {
+  width: 100%;
+  padding: 18px;
+  margin-bottom: 25px;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+}
+
+.btn-submit {
+  width: 100%;
+  padding: 15px;
+  background: #ffd700;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  font-size: 17px;
+}
+
+@media (max-width: 600px) {
+  .apply {
+    padding: 0;
+  }
+
+  .apply-box {
+    padding: 20px !important;
+    border-radius: 0 !important;
+    width: 100% !important;
+    max-width: 100% !important;
+    box-shadow: none !important;
+  }
+
+  .loan-form input,
+  .loan-form select {
+    padding: 12px !important;
+    font-size: 15px;
+  }
+
+  .btn-submit {
+    padding: 14px !important;
+    font-size: 16px !important;
+  }
+}
+
+/* ---------------------------------- */
+/* FOOTER */
+/* ---------------------------------- */
+/* 
+.footer {
+  background: #0a8837;
+  color: white;
+  padding: 30px 0;
+  text-align: center;
+  margin: top 50px;
+} */
+
+.footer {
+  background: #0a8837;
+  color: white;
+  padding: 30px 0;
+  text-align: center;
+  margin-top: 10px; /* remove gap completely */
+}
+
+/* .calculator-section {
+  padding: 60px 0;
+  background: #ffffff;
+}
+
+.calculator-section h2 {
+  text-align: center;
+  margin-bottom: 25px;
+  color: #0a8837;
+}
+
+.calculator-box {
+  display: flex;
+  justify-content: space-between;
+  gap: 30px;
+  background: white;
+  padding: 30px;
+  border-radius: 12px;
+  box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.05);
+}
+
+.calc-inputs,
+.calc-results {
+  width: 48%;
+}
+
+.calc-inputs input {
+  width: 100%;
+  padding: 14px;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  margin-bottom: 15px;
+}
+
+.calc-results {
+  background: #f4fff6;
+  padding: 20px;
+  border-radius: 10px;
+  border-left: 5px solid #0a8837;
+}
+
+.calc-results h3 {
+  color: #0a8837;
+}
+
+.calc-results p {
+  font-size: 17px;
+  margin-bottom: 10px;
+}
+
+@media (max-width: 900px) {
+  .calculator-box {
+    flex-direction: column;
+  }
+  .calc-inputs,
+  .calc-results {
+    width: 100%;
+  }
+} */
+
+html,
+body {
+  overflow-x: hidden !important;
+}
+.carousel-wrapper {
+  position: relative;
+  width: 100%;
+  overflow: hidden;
+  padding: 20px 0;
+}
+
+.carousel {
+  overflow: hidden;
+}
+
+.track {
+  display: flex;
+  gap: 30px;
+  animation: scroll 25s linear infinite;
+}
+
+.bank-card {
+  min-width: 150px;
+  background: white;
+  padding: 18px;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+  text-align: center;
+  transition: 0.3s;
+}
+
+.bank-card img {
+  width: 150px;
+  height: 150px;
+  object-fit: contain;
+}
+
+.bank-card p {
+  color: #0a8837;
+  font-weight: 800;
+  margin-top: 10px;
+}
+
+@keyframes scroll {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(-50%);
+  }
+}
+
+/* Arrows */
+.arrow {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  padding: 12px 16px;
+  background: #0a8837;
+  color: #fff;
+  border-radius: 50%;
+  border: none;
+  cursor: pointer;
+}
+
+.arrow.left {
+  left: -10px;
+}
+.arrow.right {
+  right: -10px;
+}
+
+.arrow:hover {
+  background: #0fa94f;
+}
+
+/* Mobile */
+@media (max-width: 600px) {
+  .bank-card {
+    min-width: 110px;
+  }
+  .arrow {
+    display: none;
+  }
+}
+
+/* ------------------------------- */
+/* FULL MOBILE FIX – NOTHING WILL OVERFLOW */
+/* ------------------------------- */
+
+html,
+body {
+  overflow-x: hidden !important;
+  width: 100% !important;
+}
+
+/* Fix hero image pushing layout */
+.hero-graphic img {
+  max-width: 100% !important;
+  margin-left: 0 !important;
+}
+
+/* Fix bank cards causing overflow */
+.logo-carousel,
+.carousel-track,
+.logo-slider,
+.logo-track {
+  overflow-x: hidden !important;
+}
+
+/* Force bank cards to fit mobile */
+.bank-card {
+  min-width: 140px !important;
+  max-width: 140px !important;
+  padding: 15px !important;
+}
+
+/* Fix “How it Works” cards */
+.step {
+  width: 100% !important;
+  box-sizing: border-box !important;
+  border: 1px solid #0a8837 !important;
+  border-left-width: 6px !important;
+}
+
+/* MOBILE FORM FIX */
+@media (max-width: 600px) {
+  .apply-box {
+    padding: 18px !important;
+    width: 100% !important;
+    max-width: 100% !important;
+    border-radius: 0 !important;
+    box-shadow: none !important;
+    margin-bottom: 600px !important;
+  }
+
+  .loan-form input,
+  .loan-form select {
+    padding: 14px !important;
+    font-size: 15px !important;
+  }
+}
+
+/* FIX FORM OVERFLOW ON MOBILE */
+@media (max-width: 600px) {
+  /* Remove container width limit ONLY inside apply section */
+  #apply .container {
+    width: 100% !important;
+    max-width: 100% !important;
+    padding: 0 !important;
+    margin: 0 !important;
+  }
+
+  .apply-box {
+    width: 100% !important;
+    max-width: 100% !important;
+    padding: 18px !important;
+    border-radius: 0 !important;
+    box-shadow: none !important;
+  }
+
+  .loan-form input,
+  .loan-form select {
+    width: 100% !important;
+    padding: 14px !important;
+    font-size: 16px !important;
+  }
+
+  .btn-submit {
+    width: 100% !important;
+    padding: 16px !important;
+  }
+}
+
+/* FORM GROUP */
+.form-group {
+  margin-bottom: 18px;
+}
+
+/* LABELS */
+.form-group label {
+  display: block;
+  font-size: 15px;
+  font-weight: 600;
+  margin-bottom: 6px;
+  color: #0a8837;
+}
+
+/* INPUT / SELECT */
+.loan-form input,
+.loan-form select {
+  width: 100%;
+  padding: 14px;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  font-size: 15px;
+  box-sizing: border-box;
+}
+
+/* SUBMIT BUTTON */
+.btn-submit {
+  width: 100%;
+  padding: 15px;
+  background: #ffd700;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  font-size: 17px;
+  margin-top: 10px;
+}
+
+/* MOBILE FIX */
+@media (max-width: 600px) {
+  .apply-box {
+    padding: 20px !important;
+  }
+
+  .form-group label {
+    font-size: 14px;
+  }
+
+  .loan-form input,
+  .loan-form select {
+    font-size: 14px;
+    padding: 12px;
+  }
+}
