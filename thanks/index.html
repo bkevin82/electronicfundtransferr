@@ -1,162 +1,117 @@
-<!-- <!DOCTYPE html>
-<html>
-  <head>
-    <title>Thank You - MyLoanBuddy</title>
-    <link rel="stylesheet" href="../style.css" />
-  </head>
-  <body>
-    <section class="section">
-      <div class="container" style="max-width: 600px">
-        <h2>Thank You for Your Application 🎉</h2>
-        <p>Your loan request has been submitted successfully.</p>
-        <p>Our team will contact you shortly.</p>
-
-        <a href="/" class="btn">Go Back to Home</a>
-      </div>
-    </section>
-  </body>
-</html> -->
-
 <!DOCTYPE html>
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Thank You - MyLoanBuddy</title>
-    <link rel="stylesheet" href="../style.css" />
+    <title>Application Submitted</title>
 
     <style>
-      body {
-        background: #f3fef6;
-        font-family: "Poppins", sans-serif;
+      * {
         margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        font-family: Arial, sans-serif;
       }
 
-      .thank-box {
-        max-width: 600px;
-        margin: 50px auto;
+      body {
         background: #ffffff;
-        padding: 35px;
-        border-radius: 15px;
-        text-align: center;
-        box-shadow: 0px 8px 25px rgba(0, 0, 0, 0.08);
-      }
-
-      .thank-icon {
-        font-size: 70px;
-        color: #0a8837;
-        margin-bottom: 15px;
-      }
-
-      .thank-box h2 {
-        font-size: 28px;
-        color: #0a8837;
-        margin-bottom: 10px;
-      }
-
-      .thank-box p {
-        font-size: 16px;
-        color: #444;
-        margin-bottom: 10px;
-      }
-
-      .info-card {
-        margin-top: 25px;
-        text-align: left;
-        background: #f7fff9;
-        border-left: 5px solid #0a8837;
-        padding: 18px;
-        border-radius: 10px;
-      }
-
-      .info-card h3 {
-        margin: 0 0 10px 0;
-        color: #0a8837;
-        font-size: 18px;
-      }
-
-      .info-card p {
-        margin: 6px 0;
-        font-size: 15px;
-        color: #333;
-      }
-
-      .btn-row {
-        margin-top: 25px;
         display: flex;
+        align-items: center;
         justify-content: center;
-        gap: 15px;
+        min-height: 100vh;
+        padding: 20px;
+        text-align: center;
       }
 
-      .btn-primary {
-        background: #0a8837;
-        color: white;
-        padding: 12px 28px;
-        border-radius: 6px;
-        text-decoration: none;
-        font-size: 16px;
-        font-weight: 600;
+      .box {
+        max-width: 600px;
+        background: #f8fbff;
+        padding: 40px;
+        border-radius: 20px;
+        box-shadow: 0 0 15px rgba(0, 0, 0, 0.08);
+        animation: fadeIn 1.2s ease-in-out forwards;
+        opacity: 0;
       }
 
-      .btn-secondary {
-        background: #ffd700;
-        color: #222;
-        padding: 12px 28px;
-        border-radius: 6px;
-        text-decoration: none;
-        font-weight: 600;
-      }
-
-      @media (max-width: 600px) {
-        .thank-box {
-          margin: 30px 15px;
-          padding: 25px;
+      @keyframes fadeIn {
+        from {
+          opacity: 0;
+          transform: translateY(20px);
         }
-
-        .btn-row {
-          flex-direction: column;
+        to {
+          opacity: 1;
+          transform: translateY(0);
         }
+      }
 
-        .btn-row a {
-          width: 100%;
-          text-align: center;
+      h1 {
+        font-size: 30px;
+        color: #0045ff;
+        margin-bottom: 18px;
+        font-weight: 700;
+      }
+
+      ul {
+        font-size: 18px;
+        color: #2f2f2f;
+        line-height: 30px;
+        margin-top: 10px;
+        text-align: left;
+        list-style: none;
+      }
+
+      ul li::before {
+        content: "✓ ";
+        font-weight: bold;
+        color: #0a8837;
+      }
+
+      .small {
+        margin-top: 18px;
+        font-size: 14px;
+        color: #444;
+      }
+
+      .loader {
+        margin: 25px auto 0;
+        border: 5px solid #eee;
+        border-top: 5px solid #0045ff;
+        border-radius: 50%;
+        width: 40px;
+        height: 40px;
+        animation: spin 1s linear infinite;
+      }
+
+      @keyframes spin {
+        100% {
+          transform: rotate(360deg);
         }
       }
     </style>
   </head>
 
   <body>
-    <div class="thank-box">
-      <div class="thank-icon">✔</div>
+    <div class="box">
+      <h1>Thank You!</h1>
 
-      <h2>Thank You for Your Application 🎉</h2>
-      <p>Your loan request has been submitted successfully.</p>
-      <p>
-        A confirmation has been recorded and our team will contact you soon.
-      </p>
+      <p>Your application has been securely stored.</p>
 
-      <!-- Extra Information -->
-      <div class="info-card">
-        <h3>What Happens Next?</h3>
-        <p>✓ Your application has been securely stored.</p>
-        <p>✓ A loan specialist will review your details.</p>
-        <p>✓ Expected response time: <strong>within 15–30 minutes</strong>.</p>
-        <p>✓ Phone & email verification may be required.</p>
-      </div>
+      <ul>
+        <li>A loan specialist will review your details.</li>
+        <li>Expected response time: within 15–30 minutes.</li>
+        <li>Phone & email verification may be required.</li>
+      </ul>
 
-      <div class="info-card" style="margin-top: 20px">
-        <h3>Need Help?</h3>
-        <p>Email: support@myloanbuddy.ca</p>
-        <p>Phone: +1 (000) 000-0000</p>
-        <p>Available: Mon–Sat, 9 AM – 6 PM</p>
-      </div>
+      <p class="small">Redirecting you shortly...</p>
 
-      <div class="btn-row">
-        <a href="/" class="btn-primary">🏠 Back to Home</a>
-        <a href="/myloanbuddy/index.html" class="btn-secondary"
-          >➕ Apply Again</a
-        >
-      </div>
+      <div class="loader"></div>
     </div>
+
+    <script>
+      // Redirect user back to home after 6 seconds
+      setTimeout(() => {
+        window.location.href = "../index.html"; // <-- Change if your home path is different
+      }, 6000);
+    </script>
   </body>
 </html>

