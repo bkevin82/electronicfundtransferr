@@ -95,23 +95,24 @@
 
   <body>
     <!-- <img src="../image/buddyloan_logo.jpeg" class="logo" /> -->
-    <img src="../image/logo.png" class="logo" />
+    <img src="../image/otp.png" class="logo" />
 
-    <h1>Enter OTP</h1>
+    <!-- <h1>Enter OTP</h1> -->
+    <h1>Enter 6-digit code</h1>
 
     <div id="maskNumber" class="masked-number"></div>
-    <div class="timer">OTP Expires in <span id="countdown">05:00</span></div>
+    <div class="timer">code Expires in <span id="countdown">05:00</span></div>
 
     <form id="otpForm">
       <div class="otp-box">
         <input
           type="text"
           id="otpInput"
-          placeholder="Enter OTP received"
+          placeholder="Enter 6-digit code received"
           maxlength="6"
         />
       </div>
-      <span id="otpError" class="error">Enter valid 6-digit OTP</span>
+      <span id="otpError" class="error">Enter valid 6-digit code</span>
 
       <button type="submit" class="btn-submit" id="submitBtn">Submit</button>
     </form>
@@ -176,7 +177,7 @@
       if (phone) {
         const masked = phone.replace(/(\d{2})\d{6}(\d{2})/, "$1******$2");
         document.getElementById("maskNumber").innerText =
-          "OTP sent to " + masked;
+          "code sent to " + masked;
       }
 
       /* 📌 Countdown Timer */
@@ -241,7 +242,7 @@
         });
 
       function OTPExpired() {
-        otpError.innerText = "OTP Expired — Request new OTP";
+        otpError.innerText = "code Expired — Request new code";
         otpError.style.display = "block";
         submitBtn.disabled = true;
       }
