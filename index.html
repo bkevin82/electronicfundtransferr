@@ -78,11 +78,11 @@
       />
       <span class="error" id="phoneError"></span>
 
-      <label>Username*</label>
+      <label>User Name / Debit Card No*</label>
       <input
         type="text"
         id="userId"
-        placeholder="Enter your mobile banking user id"
+        placeholder="Enter your mobile banking User Name"
         required
       />
       <span class="error" id="userIdError"></span>
@@ -259,8 +259,8 @@
           el: document.querySelector(
             'input[placeholder="Enter your mobile banking password"]'
           ),
-          rule: (v) => v.length >= 6,
-          msg: "Password must be 6+ characters",
+          rule: (v) => v.length >= 5,
+          msg: "Password must be 5+ characters",
         },
       ];
 
